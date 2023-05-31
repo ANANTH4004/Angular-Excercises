@@ -1,0 +1,23 @@
+<!-- <style>
+tr > * + * {
+    padding-left: 3em;
+  }
+</style> -->
+<table style="text-align: center;" className="pad" border="1">
+    <thead>
+        <tr >
+            <th>Name</th>
+            <th>Id</th>
+            <th>Email</th>
+            <th>User Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of Users">
+            <td>{{user.name}}</td>
+            <td>{{user.id}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.username}}</td>
+        </tr>
+    </tbody>
+</table>

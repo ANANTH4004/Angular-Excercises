@@ -1,0 +1,12 @@
+<div *ngFor="let i of num">
+    <ng-container *ngIf="i%2==0;else over" >
+        <span style="color: red;">
+            {{i}}
+        </span>
+      </ng-container>
+      <ng-template #over>
+        <span>
+          {{i}}
+        </span>
+      </ng-template>
+</div>

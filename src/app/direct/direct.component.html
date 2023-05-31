@@ -1,0 +1,9 @@
+<h1>Loop through Favorite Movies</h1>
+
+<ol>
+    <ng-container *ngFor="let movies of favMovies">
+    <li *ngIf="movies.year>2000">
+        <span >{{movies.name}}({{movies.year}})</span>
+        <br><br></li>
+    </ng-container>
+</ol>

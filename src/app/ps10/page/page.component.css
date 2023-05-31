@@ -1,0 +1,7 @@
+/* img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+} */
+
+   body { background: navy !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */

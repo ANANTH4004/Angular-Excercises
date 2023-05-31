@@ -1,0 +1,13 @@
+
+  <input [(ngModel)]="first_name" placeholder="enter the first_name"> <br>
+  <input [(ngModel)]="last_name" placeholder="enter the last_name"><br>
+  <input [(ngModel)]="  date_of_joining" placeholder="enter the date-of-joining"> <br>
+
+<h1>Employee Details</h1>
+<h3>{{first_name}}</h3>
+<h3>{{last_name}}</h3>
+<h3>{{date_of_joining}}</h3>
+
+  
+  
+<button (click)="showDetails(first_name,last_name,date_of_joining)">showDetails</button>

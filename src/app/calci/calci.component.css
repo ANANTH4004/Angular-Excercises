@@ -1,0 +1,13 @@
+.container1{
+     /* The image used */
+  background-image: url("https://images.unsplash.com/photo-1439792675105-701e6a4ab6f0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZGFya3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  /* Center and scale the image nicely https://image.shutterstock.com/image-vector/set-most-famous-cryptocurrency-coins-260nw-1975856621.jpg */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

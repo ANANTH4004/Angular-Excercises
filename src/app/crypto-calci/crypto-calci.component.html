@@ -1,0 +1,67 @@
+<!-- <table border="1">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Current_price</td>
+            <td>HIGH(24)</td>
+            <td>LOW(24)</td>
+        </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let i of data">
+        <td>{{i.name}}</td>
+        <td>{{i.current_price| currency:'INR'}}</td>
+        <td>{{i.high_24h| currency:'INR'}}</td>
+        <td>{{i.low_24h| currency:'INR'}}</td>
+    </tr>
+    </tbody>
+</table> -->
+<section class="vh-100">
+    <div class="container py-5 h-100">
+  
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-8 col-lg-6 col-xl-4 justify-content-center">
+  
+          <h3 class="mb-4 pb-4  justify-content-center align-items-center"> Check Coin Price</h3>
+  
+          <div class="input-group rounded mb-3">
+            <input type="search" id="search" [(ngModel)]="search" class="form-control rounded" placeholder="Coin Name" aria-label="Search"
+              aria-describedby="search-addon" />
+            <a href="#!" type="button" (click)="getData1()">
+              <span class="input-group-text  border-0 fw-bold" id="search-addon">
+                Submit
+              </span>
+            </a>
+          </div>
+  
+          <!-- <div class="mb-4 pb-2">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                value="option1" checked />
+              <label class="form-check-label" for="inlineRadio1">Celsius</label>
+            </div>
+  
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                value="option2" />
+              <label class="form-check-label" for="inlineRadio2">Farenheit</label>
+            </div>
+          </div> -->
+  
+          <div class="card shadow-0 border" *ngFor="let i of data">
+            <div class="card-body p-4" >
+                
+              <h4 class="mb-3">{{i.name}}({{i.symbol|uppercase}})</h4>
+              <p>Rank :<strong>{{i.market_cap_rank}}</strong></p>
+              <p class="mb-2 ">Current Price:   <strong>  {{i.current_price|currency:'INR'}} </strong></p>
+              <!-- <img class="col-md-12 img {width:100%}" src="{{i.image}}"> -->
+              <p class="mb-2 ">High_24h : <strong>{{i.high_24h|currency:'INR'}}</strong> </p>
+              <p class="mb-2 ">Low_24h :<strong>{{i.low_24h|currency:'INR'}}</strong></p>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+    </div>
+  </section>

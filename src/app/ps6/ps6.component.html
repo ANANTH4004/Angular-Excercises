@@ -1,0 +1,32 @@
+<!-- <ng-container>
+    <div *ngFor="let user of employee">
+        <ng-template *ngIf="user.employee_age > 50; then old else young"></ng-template>
+        <ng-template #young style="color: red;">{{user.employee_name}}</ng-template>
+        <ng-template #old style="color: green;">{{user.employee_name}}</ng-template>
+    </div>
+</ng-container> -->
+<!-- <div *ngFor='let user of employee;'>
+    <h2 [style.color]="user.employee_age>50? 'blue': 'red'"> {{user.employee_name}} {{user.employee_age}} </h2>
+  
+    </div> -->
+
+    <!-- <div *ngFor="let user of employee">
+        <div *ngIf="user.employee_age < 50;else young"> 
+            {{user.employee_age}}
+             </div>
+            <ng-template #young [ngStyle]="{'color': 'red'}">{{user.employee_name}}<br></ng-template>
+            <ng-template #old style="color: green;">{{user.employee_name}}</ng-template>
+      
+            </div> -->
+            <div *ngFor="let user of employee">
+            <ng-container *ngIf="user.employee_age>50;else over">
+                <div style="color: red;">
+                    {{user.employee_name | uppercase}}({{user.employee_age}})
+                </div>
+              </ng-container>
+              <ng-template #over>
+                <div style="color: blue;">
+                  {{user.employee_name}}({{user.employee_age}})
+                </div>
+              </ng-template>
+            </div>
