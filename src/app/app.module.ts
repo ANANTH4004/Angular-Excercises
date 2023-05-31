@@ -21,6 +21,7 @@ import { FooterComponent } from './ps10/footer/footer.component';
 import { SidebarComponent } from './ps10/sidebar/sidebar.component';
 import { PageComponent } from './ps10/page/page.component';
 import { CalciComponent } from './calci/calci.component';
+import { NgClassDemoComponent } from './ng-class-demo/ng-class-demo.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { CalciComponent } from './calci/calci.component';
     FooterComponent,
     SidebarComponent,
     PageComponent,
-    CalciComponent
+    CalciComponent,
+    NgClassDemoComponent
   ],
   imports: [
     BrowserModule,FormsModule,HttpClientModule
